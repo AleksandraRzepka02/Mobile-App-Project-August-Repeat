@@ -1,0 +1,45 @@
+﻿<Page
+    x:Class="App1.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid x:Name="grdRoot" Background="Pink">
+        <Image Height="150" Width="300" HorizontalAlignment="Center" VerticalAlignment="Top"  Source="Assets/Images/Love Meter.png"/>
+
+        <Rectangle Width="200" Height="100" Fill="RosyBrown" Stroke="Red" Margin="107,215,125,453" />
+        <Button Height="100" Width="200" Content="Start" x:Name="startButton" Background="Blue" HorizontalAlignment="Center" VerticalAlignment="Center" Click="StartButton" Margin="107,215,125,453">
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Source="Assets/Images/Start.png"/>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Rectangle Fill="RosyBrown" Stroke="Red"  Margin="107,438,125,229" />
+        <Button Height="100" Width="200" Content="Options" x:Name="optionsButton" Background="Blue" HorizontalAlignment="Center" VerticalAlignment="Center" Click="OptionsButton" Margin="107,438,125,230">
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Source="Assets/Images/Options.png"/>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Rectangle Width="200" Height="100" Fill="RosyBrown" Stroke="Red" Margin="107,618,125,0" />
+        <Button Height="100" Width="200" Content="Quit" x:Name="quitButton" Background="Blue" HorizontalAlignment="Center" VerticalAlignment="Center" Click="QuitButton" Margin="107,618,125,0">
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Source="Assets/Images/Quit.png"/>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <MediaElement x:Name="musicPlayer" 
+          Source="Mobile-App-1/App1/App1/Music.mp3"
+          AudioCategory="BackgroundCapableMedia"
+          CurrentStateChanged="MusicPlayer_CurrentStateChanged"/>
+    </Grid>
+</Page>
